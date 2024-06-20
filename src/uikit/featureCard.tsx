@@ -4,14 +4,16 @@ import React from "react";
 type FeatureCardProps = {
   title: string;
   description: string;
-  src: StaticImageData;
+  src: StaticImageData | string;
 };
 
 const FeatureCard = ({ title, description, src }: FeatureCardProps) => {
   return (
-    <div className="flex flex-col w-1/3 text-center">
-      <Image src={src} sizes="100%" alt="" />
-      <h3 className="font-inika font-bold text-xl text-gray-700">{title}</h3>
+    <div className="flex flex-col text-center">
+      <Image src={src} sizes="100%" alt="" className="mb-7 " />
+      <h3 className="font-inika font-bold text-xl text-gray-700 mb-4">
+        {title}
+      </h3>
       <p className="font-inika text-base text-gray-600">{description}</p>
     </div>
   );
