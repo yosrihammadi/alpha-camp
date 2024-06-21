@@ -15,7 +15,12 @@ const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <div className="flex flex-col">
-      <Image sizes="100%" alt="" src={src} />
+      <Image
+        sizes="100%"
+        alt={title}
+        src={src}
+        className="rounded-[10px] object-cover"
+      />
       <div className="flex items-center justify-between mt-6 mb-2">
         <h3 className="font-bold text-base xl:text-2xl text-green-400">
           {title}
