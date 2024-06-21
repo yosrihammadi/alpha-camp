@@ -56,7 +56,7 @@ const About = () => {
                 height={55}
                 alt="icon"
               />
-              <p className="mt-3 text-gray-700 uppercase font-inika">
+              <p className="mt-3 text-gray-800 uppercase font-inika">
                 30 camper sites
               </p>
             </div>
@@ -68,7 +68,7 @@ const About = () => {
                 height={55}
                 alt="icon"
               />
-              <p className="mt-3 text-gray-700 uppercase font-inika">
+              <p className="mt-3 text-gray-800 uppercase font-inika">
                 25 CARAVAN SITES
               </p>
             </div>
@@ -80,7 +80,7 @@ const About = () => {
                 height={55}
                 alt="icon"
               />
-              <p className="mt-3 text-gray-700 uppercase font-inika">
+              <p className="mt-3 text-gray-800 uppercase font-inika">
                 50 TENT SITES
               </p>
             </div>
@@ -92,7 +92,7 @@ const About = () => {
                 height={58}
                 alt="icon"
               />
-              <p className="mt-3 text-gray-700 uppercase font-inika">
+              <p className="mt-3 text-gray-800 uppercase font-inika">
                 10 GLAMP SITES
               </p>
             </div>
@@ -104,7 +104,7 @@ const About = () => {
                 height={56}
                 alt="icon"
               />
-              <p className="mt-3 text-gray-700 uppercase font-inika">
+              <p className="mt-3 text-gray-800 uppercase font-inika">
                 10 CABIN HOUSES
               </p>
             </div>

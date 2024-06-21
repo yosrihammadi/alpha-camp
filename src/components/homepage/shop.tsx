@@ -99,7 +99,7 @@ const Shop = () => {
             gravida varius. Aliquam nec ligula a augue congue condimentum.
             Pellentesque eget lorem euismod, viverra nisl in, viverra velit.
           </Description>
-          <p className="font-bold text-5xl text-gray-700 mb-8">
+          <p className="font-bold text-5xl text-nray-800 mb-8">
             Today’s Selection
           </p>
           <div className="grid grid-cols-3 gap-9">
