@@ -2,7 +2,7 @@ import React from "react";
 
 const NewsLetter = () => {
   return (
-    <div className="bg-green-900 bg-opacity-50 rounded-[9px] p-6 flex flex-col text-center">
+    <div className="bg-green-900 bg-opacity-50 rounded-[9px] p-6 flex flex-col text-center w-[290px] mx-auto lg:mx-0">
       <span className="font-work font-semibold text-[15px] text-white mb-1">
         Weekly Newsletter
       </span>

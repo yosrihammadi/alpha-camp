@@ -38,7 +38,7 @@ const posts = [
 
 const Blog = () => {
   return (
-    <div className="relative py-10">
+    <div className="relative py-10 px-6 lg:px-0">
       <BackgroundWithTexture />
       <div className="max-w-[1370px] mx-auto">
         <div className="container mx-auto">
@@ -54,7 +54,7 @@ const Blog = () => {
             gravida varius. Aliquam nec ligula a augue congue condimentum.
             Pellentesque eget lorem euismod, viverra nisl in, viverra velit.
           </Description>
-          <div className="grid grid-cols-2 gap-9">
+          <div className="grid lg:grid-cols-2 gap-9">
             {posts.map((post) => (
               <BlogCard key={post.title} {...post} />
             ))}

@@ -85,7 +85,7 @@ const Shop = () => {
     <div className="relative py-10">
       <BackgroundWithTexture />
 
-      <div className="max-w-[1370px] mx-auto">
+      <div className="max-w-[1370px] mx-auto px-6 lg:px-0">
         <div className="container mx-auto">
           <Subtitle>shop</Subtitle>
           <Title>
@@ -102,7 +102,7 @@ const Shop = () => {
           <p className="font-bold text-5xl text-nray-800 mb-8">
             Today’s Selection
           </p>
-          <div className="grid grid-cols-3 gap-9">
+          <div className="grid lg:grid-cols-3 gap-9">
             {products.map((product) => (
               <ProductCard key={product.title} {...product} />
             ))}

@@ -3,7 +3,7 @@ import React from "react";
 
 const Socials = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mx-auto lg:mx-0">
       <span className="font-jakarta font-semibold text-white text-sm text-center mb-5">
         Socials
       </span>

@@ -3,7 +3,7 @@ import React from "react";
 
 const Policies = () => {
   return (
-    <div className="flex gap-3 mt-auto">
+    <div className="flex gap-3 mt-auto mx-auto lg:mx-0 mb-6 lg:mb-0">
       <Link href="/" className="font-jakarta text-xs text-gray-300">
         Privacy Policy
       </Link>

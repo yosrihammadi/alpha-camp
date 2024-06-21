@@ -4,9 +4,9 @@ import Image from "next/image";
 const Discover = () => {
   return (
     <div className="bg-gray-700 bg-opacity-95">
-      <div className="relative py-10 overflow-hidden">
+      <div className="relative py-10 overflow-hidden px-6 lg:px-0">
         <div className="flex flex-col items-center z-10 relative">
-          <span className="font-bold text-6xl text-white mb-2">
+          <span className="font-bold text-4xl lg:text-6xl text-white mb-2 text-center">
             Select a region
           </span>
           <span className="text-white text-lg max-w-[650px] text-center mb-12">

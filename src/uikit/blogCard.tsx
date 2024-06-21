@@ -16,7 +16,7 @@ const BlogCard = ({ title, description, src }: BlogCardProps) => {
         src={src}
         className="rounded-[10px] object-cover flex-1"
       />
-      <div className="flex items-center justify-between mt-6 mb-2">
+      <div className="flex items-center justify-between mt-3 mb-1 lg:mt-6 lg:mb-2">
         <h3 className="font-bold text-base xl:text-2xl text-green-400">
           {title}
         </h3>

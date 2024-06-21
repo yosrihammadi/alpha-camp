@@ -20,3 +20,10 @@ body {
 
 @layer utilities {
 }
+
+/* .hamburger-close path { */
+/*   transition: all 0.2s; */
+/*   d: path( */
+/*     "M0 0V2.4L24 16.8V14.4L0 0ZM0 9.6H2.66342H24H0.204879H0ZM0 14.4V16.8L24 3.01463V0L0 14.4Z" */
+/*   ); */
+/* } */

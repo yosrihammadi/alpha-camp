@@ -2,11 +2,11 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mb-6 lg:mb-0">
       <span className="text-white text-sm font-semibold font-jakarta mb-2">
         About
       </span>
-      <p className="font-jakarta text-gray-300 text-xs max-w-[275px] mb-5">
+      <p className="font-jakarta text-gray-300 text-xs lg:max-w-[275px] mb-5">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam

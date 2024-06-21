@@ -34,7 +34,7 @@ const About = () => {
   return (
     <div className="relative py-10">
       <BackgroundWithTexture />
-      <div className="max-w-[1370px] mx-auto">
+      <div className="max-w-[1370px] mx-auto px-6 lg:px-0">
         <div className="container mx-auto">
           <Subtitle>about</Subtitle>
           <Title>
@@ -48,8 +48,8 @@ const About = () => {
             gravida varius. Aliquam nec ligula a augue congue condimentum.
             Pellentesque eget lorem euismod, viverra nisl in, viverra velit.
           </Description>
-          <div className="flex justify-evenly mb-16">
-            <div className="flex flex-col items-center justify-center">
+          <div className="flex justify-evenly mb-16 flex-col lg:flex-row">
+            <div className="flex flex-col items-center justify-center mb-6 lg:mb-0">
               <Image
                 src="/icons/camp-icon-1.svg"
                 width={96}
@@ -60,8 +60,8 @@ const About = () => {
                 30 camper sites
               </p>
             </div>
-            <span className="bg-gray-200 h-[80px] flex w-[2px]" />
-            <div className="flex flex-col items-center justify-center">
+            <span className="bg-gray-200 h-[50px] lg:flex w-[2px] hidden" />
+            <div className="flex flex-col items-center justify-center mb-6 lg:mb-0">
               <Image
                 src="/icons/camp-icon-2.svg"
                 width={74}
@@ -72,8 +72,8 @@ const About = () => {
                 25 CARAVAN SITES
               </p>
             </div>
-            <span className="bg-gray-200 h-[50px] flex w-[2px]" />
-            <div className="flex flex-col items-center justify-center">
+            <span className="bg-gray-200 h-[50px] lg:flex w-[2px] hidden" />
+            <div className="flex flex-col items-center justify-center mb-6 lg:mb-0">
               <Image
                 src="/icons/camp-icon-3.svg"
                 width={58}
@@ -84,8 +84,8 @@ const About = () => {
                 50 TENT SITES
               </p>
             </div>
-            <span className="bg-gray-200 h-[50px] flex w-[2px]" />
-            <div className="flex flex-col items-center justify-center">
+            <span className="bg-gray-200 h-[50px] lg:flex w-[2px] hidden" />
+            <div className="flex flex-col items-center justify-center mb-6 lg:mb-0">
               <Image
                 src="/icons/camp-icon-4.svg"
                 width={94}
@@ -96,7 +96,7 @@ const About = () => {
                 10 GLAMP SITES
               </p>
             </div>
-            <span className="bg-gray-200 h-[50px] flex w-[2px]" />
+            <span className="bg-gray-200 h-[50px] lg:flex w-[2px] hidden" />
             <div className="flex flex-col items-center justify-center">
               <Image
                 src="/icons/camp-icon-5.svg"
@@ -109,7 +109,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-9">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-9">
             {featureData.map((item) => (
               <FeatureCard key={item.title} {...item} />
             ))}

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Links = () => {
   return (
-    <div className="flex flex-col gap-5 text-center">
+    <div className="flex flex-col gap-5 text-center mb-6 lg:mb-0">
       <span className="font-jakarta font-semibold text-white text-sm">
         Quick Links
       </span>
