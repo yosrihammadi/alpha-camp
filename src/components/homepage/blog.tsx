@@ -13,25 +13,25 @@ const posts = [
   {
     title: "El Mrij Review ",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat..",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat",
     src: blogImg1,
   },
   {
     title: "AlphaCamp Team Visit The Great Canyon",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat..",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat",
     src: blogImg2,
   },
   {
     title: "Beni-Mtir Review ",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat..",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat",
     src: blogImg3,
   },
   {
     title: "Ain Damous Review",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat..",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat",
     src: blogImg4,
   },
 ];

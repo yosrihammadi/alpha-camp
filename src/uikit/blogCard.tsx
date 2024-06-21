@@ -21,7 +21,7 @@ const BlogCard = ({ title, description, src }: BlogCardProps) => {
           {title}
         </h3>
       </div>
-      <p className="text-gray-600 text-base">{description}</p>
+      <p className="text-gray-600 text-base line-clamp-2">{description}</p>
     </div>
   );
 };

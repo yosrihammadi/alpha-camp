@@ -12,7 +12,7 @@ export const Hero = () => {
             Let&apos;s make S&apos;more memories
           </p>
           <h1 className="text-white font-bold text-5xl uppercase mb-10">
-            Camp is <br /> more than just a word, <br /> it’s an experience!
+            Camp is more <br /> than just a word, <br /> it’s an experience!
           </h1>
           <SearchInput />
         </div>

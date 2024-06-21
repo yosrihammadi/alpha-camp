@@ -27,7 +27,7 @@ const ProductCard = ({
         </h3>
         <span className="text-gray-600 text-base">{price}TND</span>
       </div>
-      <p className="text-gray-600 text-base">{shortDescription}</p>
+      <p className="text-gray-600 text-base line-clamp-2">{shortDescription}</p>
     </div>
   );
 };

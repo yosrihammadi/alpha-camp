@@ -18,63 +18,63 @@ const products = [
   {
     title: "Camping Tent",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat..",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat",
     price: 10.99,
     src: productImg,
   },
   {
     title: "Vintage Outdoor lamp",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat..",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat",
     price: 10.99,
     src: productImg1,
   },
   {
     title: "Multi-Functional Tarp",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat..",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat",
     price: 10.99,
     src: productImg2,
   },
   {
     title: "Outdoor Chair",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat..",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat",
     price: 10.99,
     src: productImg3,
   },
   {
     title: "Camping Stove",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat..",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat",
     price: 10.99,
     src: productImg4,
   },
   {
     title: "First Aid Kit",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat..",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat",
     price: 10.99,
     src: productImg5,
   },
   {
     title: "Hammock 2P",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat..",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat",
     price: 10.99,
     src: productImg6,
   },
   {
     title: "Camping Bag 90L",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat..",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat",
     price: 10.99,
     src: productImg7,
   },
   {
     title: "Sleeping Bag -10°C",
     shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat..",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu ipsum volutpat",
     price: 10.99,
     src: productImg8,
   },
