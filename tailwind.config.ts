@@ -23,10 +23,12 @@ const config: Config = {
         700: "#24442d",
         800: "#1c3724",
         900: "#152b1b",
+        950: "#090B0A",
       },
       blue: {
-        800: "#4B5563",
-        900: "#3B3C4A",
+        700: "#4B5563",
+        800: "#3B3C4A",
+        900: "#242535",
       },
       gray: {
         50: "#FCFCFD",
@@ -43,6 +45,8 @@ const config: Config = {
     fontFamily: {
       inter: ["inter", "sans-serif"],
       inika: ["inika", "sans-serif"],
+      jakarta: ["Plus Jakarta Sans", "sans-serif"],
+      work: ["Work Sans", "sans-serif"],
     },
     extend: {},
   },
