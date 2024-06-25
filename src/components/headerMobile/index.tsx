@@ -1,9 +1,9 @@
-"use client";
 import { LogoDark } from "@/uikit/icons/logoDark";
 import HamburgerMenu from "@/uikit/icons/HamburgerMenu";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MobileNav from "./mobileNav";
 import { Close } from "@/uikit/icons/Close";
+import Link from "next/link";
 
 const HeaderMobile = () => {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -37,14 +37,17 @@ const HeaderMobile = () => {
 
   useEffect(() => {
     window.addEventListener("resize", handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
 
   return (
     <>
-      <div className="fixed top-0 left-0 w-full lg:hidden flex bg-white px-6 z-50">
+      <div className="w-full lg:hidden flex bg-white px-6 z-50">
         <div className="h-[90px] bg-white w-full flex items-center justify-between">
           <div className="w-auto h-[40px]">
-            <LogoDark />
+            <Link href="/">
+              <LogoDark />
+            </Link>
           </div>
           <button onClick={toggleModal()}>
             {show ? <Close /> : <HamburgerMenu />}

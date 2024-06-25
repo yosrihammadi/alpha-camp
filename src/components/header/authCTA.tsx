@@ -1,11 +1,14 @@
 import { Person } from "@/uikit/icons/person";
 import Link from "next/link";
 
-export const AuthCTA = () => {
+export const AuthCTA = ({ textColor }: { textColor: string }) => {
   return (
     <div className="flex items-center">
-      <Person />
-      <Link href="/auth" className="font-inika text-white ps-2">
+      <Person color={textColor} />
+      <Link
+        href="/auth"
+        className={`font-inika text-${textColor === "white" ? "white" : "black"} ps-2`}
+      >
         Sign In | Sign Up
       </Link>
     </div>

@@ -13,6 +13,7 @@ import productImg5 from "../../../public/home/products/Image-5.jpg";
 import productImg6 from "../../../public/home/products/Image-6.jpg";
 import productImg7 from "../../../public/home/products/Image-7.jpg";
 import productImg8 from "../../../public/home/products/Image-8.jpg";
+import Link from "next/link";
 
 const products = [
   {
@@ -99,9 +100,17 @@ const Shop = () => {
             gravida varius. Aliquam nec ligula a augue congue condimentum.
             Pellentesque eget lorem euismod, viverra nisl in, viverra velit.
           </Description>
-          <p className="font-bold text-5xl text-nray-800 mb-8">
-            Today’s Selection
-          </p>
+          <div className="flex items-center justify-between mb-8">
+            <p className="font-bold text-5xl text-nray-800">
+              Today’s Selection
+            </p>
+            <Link
+              href="/shop"
+              className="bg-green-400 font-bold text-lg text-white px-11 py-5 rounded-[10px]"
+            >
+              SHOP NOW
+            </Link>
+          </div>
           <div className="grid lg:grid-cols-3 gap-9">
             {products.map((product) => (
               <ProductCard key={product.title} {...product} />
