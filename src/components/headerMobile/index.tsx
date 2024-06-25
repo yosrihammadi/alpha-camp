@@ -1,13 +1,12 @@
-import { LogoDark } from "@/uikit/icons/logoDark";
-import HamburgerMenu from "@/uikit/icons/HamburgerMenu";
-import { useCallback, useEffect, useRef, useState } from "react";
-import MobileNav from "./mobileNav";
-import { Close } from "@/uikit/icons/Close";
+import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 
-const HeaderMobile = () => {
-  const dialogRef = useRef<HTMLDialogElement>(null);
+import { LogoDark } from "@/uikit/icons/logoDark";
+import HamburgerMenu from "@/uikit/icons/HamburgerMenu";
+import MobileNav from "./mobileNav";
+import { Close } from "@/uikit/icons/Close";
 
+const HeaderMobile = () => {
   const [show, setShow] = useState(false);
   const toggleModal = () => () => {
     if (show) {

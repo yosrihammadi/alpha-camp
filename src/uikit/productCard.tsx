@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type ProductCardProps = {
   title: string;
@@ -14,12 +15,13 @@ const ProductCard = ({
   src,
 }: ProductCardProps) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col lg:max-w-full max-w-[400px] mx-auto relative">
       <Image
         sizes="100%"
         alt={title}
         src={src}
-        className="rounded-[10px] object-cover"
+        objectFit="cover"
+        className="rounded-[10px] object-cover w-full h-auto"
       />
       <div className="flex items-center justify-between mt-3 mb-1 lg:mt-6 lg:mb-2">
         <h3 className="font-bold text-base xl:text-2xl text-green-400">
@@ -28,6 +30,12 @@ const ProductCard = ({
         <span className="text-gray-600 text-base">{price}TND</span>
       </div>
       <p className="text-gray-600 text-base line-clamp-2">{shortDescription}</p>
+      <Link
+        href={`/shop/${title.split(" ").join("-")}`}
+        className="text-opacity-0 inline-block absolute h-full w-full top-0 left-0"
+      >
+        {title}
+      </Link>
     </div>
   );
 };

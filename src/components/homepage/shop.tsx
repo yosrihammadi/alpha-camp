@@ -1,3 +1,4 @@
+import Link from "next/link";
 import BackgroundWithTexture from "@/uikit/BackgroundWithTexture";
 import ProductCard from "@/uikit/productCard";
 import Description from "@/uikit/typography/description";
@@ -13,7 +14,6 @@ import productImg5 from "../../../public/home/products/Image-5.jpg";
 import productImg6 from "../../../public/home/products/Image-6.jpg";
 import productImg7 from "../../../public/home/products/Image-7.jpg";
 import productImg8 from "../../../public/home/products/Image-8.jpg";
-import Link from "next/link";
 
 const products = [
   {
