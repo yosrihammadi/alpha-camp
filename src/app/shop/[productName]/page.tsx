@@ -1,10 +1,8 @@
 "use client";
 import { useParams } from "next/navigation";
-import Image, { StaticImageData } from "next/image";
-import { useRef, useState } from "react";
-
-import arrowUp from "../../../../public/icons/arrowUp.svg";
-import arrowDown from "../../../../public/icons/arrowDown.svg";
+import Image from "next/image";
+import ProductImageCarousel from "@/components/shop/productImageCarousel";
+import { Star } from "@/uikit/icons/star";
 
 import productImg from "../../../../public/home/products/Image.jpg";
 import productImg1 from "../../../../public/home/products/Image-1.jpg";
@@ -15,6 +13,9 @@ import productImg5 from "../../../../public/home/products/Image-5.jpg";
 import productImg6 from "../../../../public/home/products/Image-6.jpg";
 import productImg7 from "../../../../public/home/products/Image-7.jpg";
 import productImg8 from "../../../../public/home/products/Image-8.jpg";
+import ProductInformations from "@/components/shop/productInformations";
+import ProductOwner from "@/components/shop/productOwner";
+import { Heart } from "@/uikit/icons/heart";
 
 const products = [
   {
@@ -155,78 +156,38 @@ const products = [
 ];
 
 const Product = () => {
-  const carouselRef = useRef<HTMLDivElement>(null);
   const { productName } = useParams();
   const product = products.find(
     ({ title }) => title.split(" ").join("-") === productName,
   );
-  const [selectedImage, setSelectedImage] = useState<StaticImageData | string>(
-    product?.images[0] || "",
-  );
-
-  const handleScroll = (direction: "UP" | "DOWN") => () => {
-    if (carouselRef.current) {
-      const scrollOffset = carouselRef.current?.offsetHeight / 2;
-      carouselRef.current?.scrollBy(
-        0,
-        direction === "UP" ? -scrollOffset : scrollOffset,
-      );
-    }
-  };
 
   if (!product) return null;
   return (
-    <div className="grid grid-cols-12">
+    <div className="grid grid-cols-12 gap-6 h-full">
       <div className="grid grid-cols-12 gap-2 col-span-7">
-        <div className="flex flex-col col-span-2 gap-2">
-          <div className="h-full relative">
-            <div
-              ref={carouselRef}
-              className="overflow-y-auto relative no-scrollbar h-full scroll-smooth"
-            >
-              <div className="grid gap-2 absolute top-0 left-0">
-                {product.images.map((image, index) => (
-                  <button
-                    type="button"
-                    key={`${product.title}-${index}`}
-                    className="rounded-md overflow-hidden"
-                    onClick={() => setSelectedImage(image)}
-                  >
-                    <Image
-                      src={image}
-                      alt=""
-                      sizes="100%"
-                      className="aspect-square object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            </div>
-            <button
-              type="button"
-              className="z-10 absolute left-1/2 -translate-x-1/2 top-[-20px] h-[40px] w-[40px]"
-              onClick={handleScroll("UP")}
-            >
-              <Image src={arrowUp} alt="Arrow Up" />
-            </button>
-            <button
-              type="button"
-              className="z-10 absolute left-1/2 -translate-x-1/2 bottom-[-20px] h-[40px] w-[40px]"
-              onClick={handleScroll("DOWN")}
-            >
-              <Image src={arrowDown} alt="Arrow Down" />
-            </button>
-          </div>
+        <ProductImageCarousel product={product} />
+      </div>
+      <div className="col-span-5 flex flex-col">
+        <ProductInformations
+          {...product}
+          description={product.shortDescription}
+        />
+        <div className="mb-6 mt-auto">
+          <ProductOwner />
         </div>
-        <div className="col-span-10">
-          <div className="rounded-md overflow-hidden">
-            <Image
-              src={selectedImage}
-              alt={product.title}
-              sizes="100%"
-              className="aspect-square object-cover"
-            />
-          </div>
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            className="w-full bg-green-400 rounded-[9px] px-4 py-3 text-white text-xl font-inika"
+          >
+            Add to cart
+          </button>
+          <button
+            type="button"
+            className="bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-3 text-white text-xl font-inika flex items-center justify-center"
+          >
+            <Heart />
+          </button>
         </div>
       </div>
     </div>

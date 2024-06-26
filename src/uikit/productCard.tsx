@@ -32,7 +32,7 @@ const ProductCard = ({
       <p className="text-gray-600 text-base line-clamp-2">{shortDescription}</p>
       <Link
         href={`/shop/${title.split(" ").join("-")}`}
-        className="text-opacity-0 inline-block absolute h-full w-full top-0 left-0"
+        className="text-opacity-0 inline-block absolute h-full w-full top-0 left-0 text-transparent"
       >
         {title}
       </Link>
