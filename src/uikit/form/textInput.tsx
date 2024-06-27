@@ -17,8 +17,8 @@ const TextInput = ({
   type,
   name,
   id,
-  value,
   label,
+  value,
   onChange,
 }: TextInputProps) => {
   const [secureText, setSecureText] = useState(type === "password");
@@ -50,7 +50,6 @@ const TextInput = ({
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         onChange={handleChange}
-        onLoad={(e) => console.log(e)}
       />
       {type === "password" && (
         <button

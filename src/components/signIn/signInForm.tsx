@@ -18,7 +18,7 @@ const SignInForm = () => {
     }));
   };
   return (
-    <div className="bg-white py-8 px-11 rounded-2xl shadow-[-2px_2px_6px_0px_rgba(17,31,53,0.15)] flex flex-col w-[525px] mx-auto">
+    <div className="bg-white py-8 px-11 rounded-2xl shadow-[-2px_2px_6px_0px_rgba(17,31,53,0.15)] flex flex-col w-[525px] m-auto">
       <span className="font-inika text-sm text-black uppercase mb-2">
         Welcome Back
       </span>
@@ -60,7 +60,7 @@ const SignInForm = () => {
           </Link>
         </div>
         <div className="">
-          <button className="w-full text-sm p-4 text-white bg-green-400 rounded-xl font-inika font-bold text-sm ">
+          <button className="w-full text-sm p-4 text-white bg-green-400 rounded-xl font-inika font-bold">
             Sign In
           </button>
         </div>
@@ -74,7 +74,7 @@ const SignInForm = () => {
             Need an account?
           </span>
           <Link
-            href="/sign-up"
+            href="/sign-up/personal"
             className="font-inika font-bold text-green-400 text-md underline"
           >
             Create one

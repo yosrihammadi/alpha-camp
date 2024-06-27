@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import Header from "@/components/header";
 
-const SignInLayout = ({ children }: { children: ReactNode }) => {
+const SignUpLayout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="flex flex-col h-full">
       <Header bgColor="white" textColor="dark" position="sticky" />
@@ -12,4 +12,4 @@ const SignInLayout = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default SignInLayout;
+export default SignUpLayout;
