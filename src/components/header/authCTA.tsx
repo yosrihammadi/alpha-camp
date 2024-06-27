@@ -6,7 +6,7 @@ export const AuthCTA = ({ textColor }: { textColor: string }) => {
     <div className="flex items-center">
       <Person color={textColor} />
       <Link
-        href="/auth"
+        href="/sign-in"
         className={`font-inika text-${textColor === "white" ? "white" : "black"} ps-2`}
       >
         Sign In | Sign Up
