@@ -1,9 +1,19 @@
 import { ChangeEvent } from "react";
 
-const Checkbox = ({ label = "remember me", name, id, value, onChange }) => {
+type checkboxProps = {
+  label: string;
+  name: string;
+  id: string;
+  value: boolean;
+  onChange: Function | null;
+};
+
+const Checkbox = ({ label, name, id, value, onChange }: checkboxProps) => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = e.target;
-    onChange({ target: { name, value: checked } });
+    if (onChange) {
+      onChange({ target: { name, value: checked } });
+    }
   };
   return (
     <div className="flex items-center transition-all">
