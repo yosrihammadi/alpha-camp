@@ -100,13 +100,13 @@ const Shop = () => {
             gravida varius. Aliquam nec ligula a augue congue condimentum.
             Pellentesque eget lorem euismod, viverra nisl in, viverra velit.
           </Description>
-          <div className="flex items-center justify-between mb-8">
-            <p className="font-bold text-5xl text-nray-800">
+          <div className="flex lg:flex-row flex-col items-center justify-between mb-6 lg:mb-8">
+            <p className="font-bold text-5xl text-gray-800 lg:text-start text-center">
               Today’s Selection
             </p>
             <Link
               href="/shop"
-              className="bg-green-400 font-bold text-lg text-white px-11 py-5 rounded-[10px]"
+              className="bg-green-400 font-bold text-lg text-white px-11 py-5 rounded-[10px] mt-5 lg:mt-0"
             >
               SHOP NOW
             </Link>

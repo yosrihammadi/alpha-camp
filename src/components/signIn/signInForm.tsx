@@ -18,7 +18,7 @@ const SignInForm = () => {
     }));
   };
   return (
-    <div className="bg-white py-8 px-11 rounded-2xl shadow-[-2px_2px_6px_0px_rgba(17,31,53,0.15)] flex flex-col w-[525px] m-auto">
+    <div className="bg-white py-8 px-11 rounded-2xl shadow-[-2px_2px_6px_0px_rgba(17,31,53,0.15)] flex flex-col w-full max-w-[525px] m-auto">
       <span className="font-inika text-sm text-black uppercase mb-2">
         Welcome Back
       </span>

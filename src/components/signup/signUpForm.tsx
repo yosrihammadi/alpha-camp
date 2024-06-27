@@ -33,7 +33,7 @@ const SignUpForm = ({ isBusiness }: SignUpFormProps) => {
 
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-[-2px_2px_6px_0px_rgba(17,31,53,0.15)] m-auto grid grid-cols-12 lg:max-w-[1200px]">
-      <div className="flex flex-col col-span-7 py-8 px-11">
+      <div className="flex flex-col col-span-12 lg:col-span-7 py-8 px-11">
         <span className="font-inika text-4xl text-black mb-5">Sign Up</span>
         <p className="font-inika text-xl text-black mb-14">
           {isBusiness ? (
@@ -80,7 +80,7 @@ const SignUpForm = ({ isBusiness }: SignUpFormProps) => {
           </div>
         </form>
       </div>
-      <div className="bg-green-400 flex flex-col col-span-5 py-8 px-11">
+      <div className="bg-green-400 flex flex-col col-span-12 lg:col-span-5 py-8 px-11">
         <Image
           src="/auth/business-img.svg"
           width={420}
