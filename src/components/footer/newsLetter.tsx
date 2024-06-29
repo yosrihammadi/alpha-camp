@@ -12,7 +12,6 @@ const NewsLetter = () => {
 
       <input
         type="email"
-        id="email"
         placeholder="Your Email"
         className="font-work text-xs text-white py-2 px-3 placeholder-gray-300 bg-black mb-2 rounded-[5px] outline-none border-0"
       />

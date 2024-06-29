@@ -1,29 +1,27 @@
-import { ChangeEvent } from "react";
+import { useState } from "react";
+import { FieldValues, UseFormRegister } from "react-hook-form";
 
 type checkboxProps = {
   label: string;
-  name: string;
   id: string;
-  value: boolean;
-  onChange: Function | null;
+  name: string;
+  register: UseFormRegister<FieldValues>;
 };
 
-const Checkbox = ({ label, name, id, value, onChange }: checkboxProps) => {
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = e.target;
-    if (onChange) {
-      onChange({ target: { name, value: checked } });
-    }
-  };
+const Checkbox = ({ label, id, name, register }: checkboxProps) => {
+  const [checked, setChecked] = useState(false);
+  const { onChange, ...props } = register(name);
   return (
     <div className="flex items-center transition-all">
       <input
         id={id}
-        name={name}
         type="checkbox"
-        checked={value}
-        onChange={handleChange}
         hidden
+        {...props}
+        onChange={(e) => {
+          setChecked(e.target.checked);
+          onChange(e);
+        }}
       />
 
       <label
@@ -31,7 +29,11 @@ const Checkbox = ({ label, name, id, value, onChange }: checkboxProps) => {
         className="flex items-center gap-2 cursor-pointer font-inika text-black text-sm"
       >
         <span
-          className={`flex items-center p-1 justify-center w-5 h-5 rounded-md ${value === true ? "bg-gray-200" : "bg-white border-2 border-gray-200"}`}
+          className={`flex items-center p-1 justify-center w-5 h-5 rounded-md ${
+            checked === true
+              ? "bg-gray-200"
+              : "bg-white border-2 border-gray-200"
+          }`}
         >
           <svg
             width="15"
@@ -39,7 +41,7 @@ const Checkbox = ({ label, name, id, value, onChange }: checkboxProps) => {
             viewBox="0 0 15 11"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={value === true ? "" : "hidden"}
+            className={checked === true ? "" : "hidden"}
           >
             <path
               d="M1.45752 4.79637L6.04047 9.4806L14.0606 1.2832"

@@ -18,10 +18,9 @@ export const Hero = () => {
       <Image
         fill
         src="/home/hero-bg.webp"
-        objectFit="cover"
         sizes="100% 100%"
         alt=""
-        className="-z-10"
+        className="-z-10 object-cover"
       />
     </div>
   );

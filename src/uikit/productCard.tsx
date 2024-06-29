@@ -20,8 +20,7 @@ const ProductCard = ({
         sizes="100%"
         alt={title}
         src={src}
-        objectFit="cover"
-        className="rounded-[10px] object-cover w-full h-auto"
+        className="rounded-[10px] object-cover w-full h-auto object-cover"
       />
       <div className="flex items-center justify-between mt-3 mb-1 lg:mt-6 lg:mb-2">
         <h3 className="font-bold text-base xl:text-2xl text-green-400">
