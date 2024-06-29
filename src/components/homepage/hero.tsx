@@ -1,5 +1,4 @@
 import SearchInput from "@/uikit/form/searchInput";
-import Header from "../header";
 import Image from "next/image";
 
 export const Hero = () => {

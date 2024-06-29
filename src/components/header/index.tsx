@@ -1,43 +1,86 @@
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import { Nav } from "./nav";
 import { LogoLight } from "@/uikit/icons/logoLight";
 import { AuthCTA } from "./authCTA";
 import HeaderMobile from "../headerMobile";
 import { LogoDark } from "@/uikit/icons/logoDark";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-type HeaderProps = {
-  bgColor?: "white" | "transparent";
-  textColor?: "dark" | "white";
-  position?: "sticky" | "fixed";
-};
+const Header = () => {
+  const pathname = usePathname();
 
-const Header = ({
-  bgColor = "transparent",
-  textColor = "white",
-  position = "sticky",
-}: HeaderProps) => {
+  const [styles, setStyles] = useState(
+    pathname === "/"
+      ? {
+          bgColor: "transparent",
+          textColor: "white",
+          position: "fixed",
+        }
+      : {
+          bgColor: "white",
+          textColor: "dark",
+          position: "sticky",
+        }
+  );
+
   const ref = useRef<HTMLDivElement>(null);
-  const [colors, setColors] = useState({ bgColor, textColor });
+  const [colors, setColors] = useState({
+    bgColor: styles.bgColor,
+    textColor: styles.textColor,
+  });
   const handleWindowScroll = useCallback(() => {
     if (!ref.current) return;
     if (window.scrollY > 0) {
       setColors({ bgColor: "white", textColor: "dark" });
     } else {
-      setColors({ bgColor, textColor });
+      setColors({ bgColor: styles.bgColor, textColor: styles.textColor });
     }
-  }, [bgColor, textColor]);
+  }, [styles]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleWindowScroll);
     return () => window.removeEventListener("scroll", handleWindowScroll);
   }, [handleWindowScroll]);
 
+  useEffect(() => {
+    setStyles(
+      pathname === "/"
+        ? {
+            bgColor: "transparent",
+            textColor: "white",
+            position: "fixed",
+          }
+        : {
+            bgColor: "white",
+            textColor: "dark",
+            position: "sticky",
+          }
+    );
+    setColors(
+      pathname === "/"
+        ? {
+            bgColor: "transparent",
+            textColor: "white",
+          }
+        : {
+            bgColor: "white",
+            textColor: "dark",
+          }
+    );
+  }, [pathname]);
+
   return (
     <div
       ref={ref}
-      className={`bg-${colors.bgColor} lg:h-[74px] ${position} left-0 top-0 w-full z-50 transition-all duration-300`}
+      className={`bg-${colors.bgColor} lg:h-[74px] ${styles.position} left-0 top-0 w-full z-50 transition-all duration-300`}
     >
       <div className="container mx-auto">
         <HeaderMobile />
