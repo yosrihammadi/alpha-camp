@@ -5,7 +5,7 @@ type checkboxProps = {
   label: string;
   id: string;
   name: string;
-  register: UseFormRegister<FieldValues>;
+  register: UseFormRegister<any>;
 };
 
 const Checkbox = ({ label, id, name, register }: checkboxProps) => {
