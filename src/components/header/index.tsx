@@ -78,7 +78,7 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <div
+    <header
       ref={ref}
       className={`bg-${colors.bgColor} lg:h-[74px] ${styles.position} left-0 top-0 w-full z-50 transition-all duration-300`}
     >
@@ -92,7 +92,7 @@ const Header = () => {
           <AuthCTA textColor={colors.textColor} />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

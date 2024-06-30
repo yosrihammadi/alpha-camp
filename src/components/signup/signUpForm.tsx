@@ -1,5 +1,5 @@
 "use client";
-import { ChangeEvent, useState } from "react";
+import * as z from "zod";
 import TextInput from "@/uikit/form/textInput";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,12 +9,31 @@ import {
   signUpBusinessElements,
   signUpPersonalElements,
 } from "./form";
+import { useForm } from "react-hook-form";
+import { SignUpSchema } from "@/schemas";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 type SignUpFormProps = {
   isBusiness?: boolean | null;
 };
 
 const SignUpForm = ({ isBusiness }: SignUpFormProps) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<z.infer<typeof SignUpSchema>>({
+    resolver: zodResolver(SignUpSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      address: "",
+      phoneNumber: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    },
+  });
   const elements = isBusiness ? signUpBusinessElements : signUpPersonalElements;
   const switchLabel = isBusiness
     ? "Switch to Personal account"
@@ -22,13 +41,8 @@ const SignUpForm = ({ isBusiness }: SignUpFormProps) => {
 
   const switchUrl = `/sign-up/${isBusiness ? "personal" : "business"}`;
 
-  const [formData, setFormData] = useState<{ [key: string]: string }>({});
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+  const onSubmit = (values: z.infer<typeof SignUpSchema>) => {
+    console.log(values);
   };
 
   return (
@@ -48,18 +62,22 @@ const SignUpForm = ({ isBusiness }: SignUpFormProps) => {
             </>
           )}
         </p>
-        <form className="space-y-5" autoFocus>
+        <form className="space-y-5" autoFocus onSubmit={handleSubmit(onSubmit)}>
           {elements.map((el: TElement) => {
+            const name = el.name;
             return (
               <TextInput
                 key={el.id}
                 {...el}
-                value={formData[el.name]}
-                onChange={handleChange}
+                errorMessage={errors[name]?.message}
+                register={register}
               />
             );
           })}
-          <button className="w-full text-sm p-4 text-white bg-green-400 rounded-xl font-inika font-bold">
+          <button
+            type="submit"
+            className="w-full text-sm p-4 text-white bg-green-400 rounded-xl font-inika font-bold"
+          >
             Sign Up
           </button>
           <div className="flex items-center w-full space-x-2">

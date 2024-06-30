@@ -1,5 +1,12 @@
 export type TElement = {
-  name: string;
+  name:
+    | "firstName"
+    | "lastName"
+    | "address"
+    | "email"
+    | "phoneNumber"
+    | "password"
+    | "confirmPassword";
   id: string;
   label: string;
   type: string;
