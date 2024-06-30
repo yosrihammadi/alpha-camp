@@ -2,8 +2,8 @@ import { ReactNode } from "react";
 
 const SignUpLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="flex flex-col h-full">
-      <div className="relative py-10 px-6 lg:px-0 container mx-auto flex-1 overflow-auto">
+    <div className="flex flex-col">
+      <div className="relative py-10 px-6 lg:px-0 container mx-auto flex-1">
         {children}
       </div>
     </div>
